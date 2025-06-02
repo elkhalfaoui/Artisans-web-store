@@ -1,7 +1,17 @@
 @import "tailwindcss";
-body {
-    background-color: #f4f4f5;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+ /* Hide scrollbar but allow scrolling */
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
 }
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 @keyframes sliderAnimation {
     0% {
       right: 0%;
