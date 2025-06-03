@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import BurgerMenu from './BurgerMenu';
 import ThemeToggle from './ThemeToggle';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [theme, setTheme] = useState(true);
@@ -47,7 +48,7 @@ const Header = () => {
           }
         >
           <li>
-            <a href="#">HOME</a>
+            <Link to={'/'}>Home</Link>
           </li>
           <li>
             <a
@@ -59,9 +60,9 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#">ALL PRODUCTS</a>
+            <Link to={'/products'}>ALL PRODUCTS</Link>
           </li>
-          <li className="relative cursor-pointer">
+          {/* <li className="relative cursor-pointer">
             <p
               className="flex gap-2 hover:text-purple-700"
               onClick={() => setCategoriesList(!categoriesList)}
@@ -89,7 +90,7 @@ const Header = () => {
               <li className="hover:text-purple-700">Desks</li>
               <li className="hover:text-purple-700">Beds</li>
             </ul>
-          </li>
+          </li> */}
           <li>
             <a href="#about">ABOUT</a>
           </li>
