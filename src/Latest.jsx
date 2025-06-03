@@ -7,7 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useState } from 'react';
 
-const Popular = () => {
+const Latest = () => {
   const scrollCart = useRef(null);
   const scrollCarts = useRef(null);
   const [scrollPos, setScrollPos] = useState(0);
@@ -17,7 +17,7 @@ const Popular = () => {
   return (
     <div>
       <div className="relative container m-auto mt-24 px-2 md:px-4">
-        <h2 className="text-2xl mb-12">Popular Products</h2>
+        <h2 className="text-2xl mb-12">Latest Products</h2>
         {scrollLeft ? (
           <span className="absolute z-20 left-0 top-[58%] -translate-y-1/2 py-2 px-4 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-purple-600">
             <FontAwesomeIcon icon={faAngleLeft} />
@@ -71,4 +71,4 @@ const Popular = () => {
     </div>
   );
 };
-export default Popular;
+export default Latest;

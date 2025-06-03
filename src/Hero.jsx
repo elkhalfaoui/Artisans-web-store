@@ -22,7 +22,7 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [slider]);
   return (
-    <div className="container m-auto mt-32 px-4">
+    <div className="container m-auto mt-24 px-4">
       <ul className="grid grid-cols-1 md:grid-cols-5 items-center gap-y-12 px-4">
         <li className="col-span-2 flex flex-col items-start gap-10 order-2 md:order-1">
           <div className="w-16 h-0.75 bg-orange-500"></div>

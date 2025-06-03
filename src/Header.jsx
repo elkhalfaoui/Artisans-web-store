@@ -27,8 +27,8 @@ const Header = () => {
     <header
       className={
         menu
-          ? 'absolute top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800 border-b-2 lg:border-b-0 border-purple-700'
-          : 'absolute top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800'
+          ? 'sticky top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800 shadow-md dark:shadow-zinc-700 border-b-2 lg:border-b-0 border-purple-700'
+          : 'sticky top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800 shadow-md dark:shadow-zinc-700'
       }
     >
       <div className="container m-auto flex flex-col lg:flex-row justify-between px-2 py-6 text-sm ">
@@ -52,13 +52,15 @@ const Header = () => {
           <li>
             <a
               href="#"
-              className="flex gap-2 items-center py-1 px-2 border-2 text-purple-700 border-purple-700 rounded-4xl hover:bg-purple-600 hover:text-white"
+              className="flex gap-2 items-center py-1 px-2 border-2 text-purple-700 border-purple-700 rounded-full hover:bg-purple-600 hover:text-white"
             >
               <FontAwesomeIcon icon={faStar} />
               <span>BEST SELLERS</span>
             </a>
           </li>
-          <li>ALL PRODUCTS</li>
+          <li>
+            <a href="#">ALL PRODUCTS</a>
+          </li>
           <li className="relative cursor-pointer">
             <p
               className="flex gap-2 hover:text-purple-700"
@@ -88,8 +90,12 @@ const Header = () => {
               <li className="hover:text-purple-700">Beds</li>
             </ul>
           </li>
-          <li>ABOUT</li>
-          <li>CONTACTS</li>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#contacts">CONTACTS</a>
+          </li>
           <li>
             <ThemeToggle theme={theme} setTheme={setTheme} />
           </li>
