@@ -9,7 +9,7 @@ import router from './router';
 const App = () => {
   return (
     <div className="bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 scroll-smooth">
-      <RouterProvider router={router} />
+      <Home />
     </div>
   );
 };
