@@ -28,8 +28,8 @@ const Header = () => {
     <header
       className={
         menu
-          ? 'sticky top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800 shadow-md dark:shadow-zinc-700 border-b-2 lg:border-b-0 border-purple-700'
-          : 'sticky top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800 shadow-md dark:shadow-zinc-700'
+          ? 'sticky top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800 border-b-2 lg:border-b-0 border-purple-700'
+          : 'sticky top-0 left-0 w-full z-50 bg-zinc-100 dark:bg-zinc-800 border-b border-zinc-200 dark:border-zinc-700'
       }
     >
       <div className="container m-auto flex flex-col lg:flex-row justify-between px-2 py-6 text-sm ">

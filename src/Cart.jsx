@@ -8,7 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Cart = ({num}) => {
   return (
     <li className="flex flex-col gap-2 rounded-2xl p-3 pb-5 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-600 snap-start">
-      <div className="w-60 aspect-square bg-red-300 rounded-lg"></div>
+      <div
+        className={
+          num
+            ? 'w-60 aspect-square bg-red-300 rounded-lg'
+            : 'aspect-square bg-red-300 rounded-lg'
+        }
+      ></div>
       <h3 className="px-1">Product Name {num}</h3>
       <ul className="flex items-center gap-1 px-1 text-xs">
         <li className="flex gap-0.5">
