@@ -15,7 +15,13 @@ const Header = () => {
           <img src={logo} alt="Gehmy Marine" />
           <BurgerBar menu={menu} setMenu={setMenu} />
         </div>
-        <ul className={menu? "flex flex-col lg:flex-row gap-4" : 'hidden'}>
+        <ul
+          className={
+            menu
+              ? 'flex flex-col lg:flex-row gap-4'
+              : 'hidden lg:flex flex-col lg:flex-row gap-4'
+          }
+        >
           <li className="py-1 px-3 border-2  rounded-full border-sky-600 cursor-pointer">
             <a href="#">Home</a>
           </li>
@@ -32,7 +38,13 @@ const Header = () => {
             <a href="#">Equipments</a>
           </li>
         </ul>
-        <ul className={menu? "flex flex-col lg:flex-row mt-4 lg:mt-0 gap-4" : 'hidden'}>
+        <ul
+          className={
+            menu
+              ? 'flex flex-col lg:flex-row mt-4 lg:mt-0 gap-4'
+              : 'hidden lg:flex flex-col lg:flex-row mt-4 lg:mt-0 gap-4'
+          }
+        >
           <li className="">
             <button className="py-2 px-4 rounded-full cursor-pointer bg-sky-600 hover:bg-sky-700 text-white">
               Contact
