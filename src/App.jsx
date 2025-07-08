@@ -60,7 +60,7 @@ const App = () => {
           </div>
           <nav
             className={`md:col-span-4 lg:col-span-2 flex justify-between items-center flex-col md:flex-row h-[calc(100dvh-56px)] py-16 md:py-0 absolute left-0 w-full md:h-fit md:translate-0 md:top-0 md:relative duration-500 -z-10 md:z-0 bg-zinc-100 ${
-              menu ? 'top-14' : '-top-[calc(100dvh-56px)]'
+              menu ? 'top-14' : '-top-[100dvh]'
             }`}
           >
             <ul className="flex flex-col md:flex-row items-center gap-6">
