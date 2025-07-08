@@ -5,6 +5,7 @@ import BurgerMenu from './components/BurgerMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
+import InfiniteCartSlider from './InfiniteCartSlider';
 
 const App = () => {
   const [menu, setMenu] = useState(false);
@@ -43,27 +44,26 @@ const App = () => {
           showHeader ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <div className="md:container mx-auto px-4 py-2 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 items-center">
-          <div className="col-span-1 flex justify-between items-center md:p-0 bg-zinc-100">
+        <div className="md:container mx-auto md:px-4 md:py-2 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 items-center">
+          <div className="col-span-1 flex justify-between items-center px-4 py-2 md:p-0 bg-zinc-100">
             <img src={logo} alt="Gehmy Marine" />
             <div className="flex items-center gap-4">
               <button className="md:hidden py-1 px-2 cursor-pointer rounded-full border-2 border-sky-700 bg-sky-700 hover:bg-zinc-100 text-zinc-100 hover:text-sky-700">
                 <FontAwesomeIcon icon={faSun} />
               </button>
-              <button className="md:hidden w-fit py-1 px-3 cursor-pointer rounded-full border-2 border-sky-700 bg-sky-700 hover:bg-zinc-100 text-zinc-100 hover:text-sky-700">
-                Contact
+              <button className="md:hidden py-1 px-2 cursor-pointer rounded-full border-2 border-sky-700 bg-sky-700 hover:bg-zinc-100 text-zinc-100 hover:text-sky-700">
+                <FontAwesomeIcon icon={faPaperPlane} />
               </button>
+
               <BurgerMenu menu={menu} setMenu={setMenu} />
             </div>
           </div>
           <nav
-            className={`md:col-span-4 lg:col-span-2 flex justify-between items-center flex-col md:flex-row py-12 md:py-0 absolute left-0 w-full md:h-fit md:relative transition-transform duration-300 -z-10 md:z-0 bg-zinc-100 ${
-              menu
-                ? 'h-[calc(100dvh-48px)] top-14 md:top-0 md:translate-0 border-b-6 md:border-y-0  border-b-sky-700'
-                : '-translate-y-full md:translate-0'
+            className={`md:col-span-4 lg:col-span-2 flex justify-between items-center flex-col md:flex-row h-[calc(100dvh-56px)] py-16 md:py-0 absolute left-0 w-full md:h-fit md:translate-0 md:top-0 md:relative duration-500 -z-10 md:z-0 bg-zinc-100 ${
+              menu ? 'top-14' : '-top-[calc(100dvh-56px)]'
             }`}
           >
-            <ul className="flex flex-col md:flex-row items-center gap-4">
+            <ul className="flex flex-col md:flex-row items-center gap-8">
               <li className="cursor-pointer text-zinc-800 hover:text-sky-700">
                 Home
               </li>
@@ -77,7 +77,7 @@ const App = () => {
                 Equipments
               </li>
             </ul>
-            <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="">Lang</div>
               <button className="hidden md:flex py-2 px-2 cursor-pointer rounded-full border-2 border-sky-700 bg-sky-700 hover:bg-zinc-100 text-zinc-100 hover:text-sky-700">
                 <FontAwesomeIcon icon={faSun} />
@@ -90,152 +90,7 @@ const App = () => {
           </nav>
         </div>
       </header>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <InfiniteCartSlider />
     </div>
   );
 };
