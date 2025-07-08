@@ -63,7 +63,7 @@ const App = () => {
               menu ? 'top-14' : '-top-[calc(100dvh-56px)]'
             }`}
           >
-            <ul className="flex flex-col md:flex-row items-center gap-8">
+            <ul className="flex flex-col md:flex-row items-center gap-6">
               <li className="cursor-pointer text-zinc-800 hover:text-sky-700">
                 Home
               </li>
@@ -77,7 +77,7 @@ const App = () => {
                 Equipments
               </li>
             </ul>
-            <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-4">
               <div className="">Lang</div>
               <button className="hidden md:flex py-2 px-2 cursor-pointer rounded-full border-2 border-sky-700 bg-sky-700 hover:bg-zinc-100 text-zinc-100 hover:text-sky-700">
                 <FontAwesomeIcon icon={faSun} />

@@ -1,8 +1,9 @@
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const InfiniteCartSlider = () => {
+  const [touch, setTouch] = useState({ start: 0, end: 0 });
   const [carts, setCarts] = useState([
     { id: 0, pos: 0, title: '1', color: '#38bdf8' }, // sky
     { id: 1, pos: 1, title: '2', color: '#facc15' }, // yellow
@@ -35,6 +36,14 @@ const InfiniteCartSlider = () => {
       }))
     );
   };
+  useEffect(() => {
+    if (touch.start > touch.end + 20) {
+      toRight();
+    }
+    if (touch.start < touch.end + 20) {
+      toLeft();
+    }
+  }, [touch]);
   return (
     <div className="py-20">
       <div className="container mx-auto px-4 md:px-2">
@@ -52,8 +61,18 @@ const InfiniteCartSlider = () => {
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
         </div>
-        <div className="w-full overflow-hidden">
-          <ul className="relative w-[600%] md:w-[300%] lg:w-[240%] -translate-x-6/12 md:-translate-x-4/12 lg:-translate-x-4/12 h-16 -z-10 bg-red-300">
+        <div
+          className="w-full overflow-hidden"
+          onTouchStart={(e) => {
+            setTouch({ ...touch, start: e.changedTouches[0].screenX });
+            console.log(e.changedTouches[0].screenX);
+          }}
+          onTouchEnd={(e) => {
+            setTouch({ ...touch, end: e.changedTouches[0].screenX });
+            console.log(e.changedTouches[0].screenX);
+          }}
+        >
+          <ul className="relative w-[600%] md:w-[400%] lg:w-[240%] -translate-x-6/12 md:-translate-x-5/12 lg:-translate-x-4/12 h-16 -z-10 bg-red-300">
             {carts.map((cart) => (
               <li
                 key={cart.id}
