@@ -41,7 +41,7 @@ const InfiniteCartSlider = () => {
     if (touchStart > touchEnd + 160) {
       toRight();
     }
-    if (touchStart < touchEnd + 160) {
+    if (touchStart + 160 < touchEnd) {
       toLeft();
     }
   }, [touchEnd]);
