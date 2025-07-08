@@ -38,10 +38,10 @@ const InfiniteCartSlider = () => {
     );
   };
   useEffect(() => {
-    if (touchStart > touchEnd + 160) {
+    if (touchStart > touchEnd && touchEnd !== 0) {
       toRight();
     }
-    if (touchStart + 160 < touchEnd) {
+    if (touchStart < touchEnd && touchEnd !== 0) {
       toLeft();
     }
   }, [touchEnd]);
@@ -65,11 +65,11 @@ const InfiniteCartSlider = () => {
         <div
           className="w-full overflow-hidden"
           onTouchStart={(e) => {
-            setTouchStart(e.changedTouches[0].screenX );
+            setTouchStart(e.changedTouches[0].screenX);
             console.log(e.changedTouches[0].screenX);
           }}
           onTouchEnd={(e) => {
-            setTouchEnd(e.changedTouches[0].screenX );
+            setTouchEnd(e.changedTouches[0].screenX);
             console.log(e.changedTouches[0].screenX);
           }}
         >
