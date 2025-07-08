@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
 const InfiniteCartSlider = () => {
-  const [touch, setTouch] = useState({ start: 0, end: 0 });
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const [carts, setCarts] = useState([
     { id: 0, pos: 0, title: '1', color: '#38bdf8' }, // sky
     { id: 1, pos: 1, title: '2', color: '#facc15' }, // yellow
@@ -37,13 +38,13 @@ const InfiniteCartSlider = () => {
     );
   };
   useEffect(() => {
-    if (touch.start > touch.end + 80) {
+    if (touchStart > touchEnd + 160) {
       toRight();
     }
-    if (touch.start < touch.end + 80) {
+    if (touchStart < touchEnd + 160) {
       toLeft();
     }
-  }, [touch]);
+  }, [touchEnd]);
   return (
     <div className="py-20">
       <div className="container mx-auto px-4 md:px-2">
@@ -64,11 +65,11 @@ const InfiniteCartSlider = () => {
         <div
           className="w-full overflow-hidden"
           onTouchStart={(e) => {
-            setTouch({ ...touch, start: e.changedTouches[0].screenX });
+            setTouchStart(e.changedTouches[0].screenX );
             console.log(e.changedTouches[0].screenX);
           }}
           onTouchEnd={(e) => {
-            setTouch({ ...touch, end: e.changedTouches[0].screenX });
+            setTouchEnd(e.changedTouches[0].screenX );
             console.log(e.changedTouches[0].screenX);
           }}
         >
