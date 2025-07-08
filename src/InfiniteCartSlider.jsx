@@ -37,10 +37,10 @@ const InfiniteCartSlider = () => {
     );
   };
   useEffect(() => {
-    if (touch.start > touch.end + 20) {
+    if (touch.start > touch.end + 80) {
       toRight();
     }
-    if (touch.start < touch.end + 20) {
+    if (touch.start < touch.end + 80) {
       toLeft();
     }
   }, [touch]);
